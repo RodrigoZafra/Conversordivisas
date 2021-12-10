@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvCantidadEuros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad en euros"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="30dp"/>
+
+    <EditText
+        android:id="@+id/EtCantidad"
+        android:layout_width="78dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvCantidadEuros"></EditText>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDivisas"
+        android:layout_width="291dp"
+        android:layout_height="237dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCantidadEuros" />
+
+    <Switch
+        android:id="@+id/swVip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cliente VIP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvDivisas"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/btConvertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convertir"
+        android:onClick="Convertir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/swVip"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvCantidadNuevaDivisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad en nueva divisa"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btConvertir"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCantidadNuevaDivisa" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Divisa destino"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rvDivisas"
+        app:layout_constraintTop_toBottomOf="@id/tvCantidadEuros"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
